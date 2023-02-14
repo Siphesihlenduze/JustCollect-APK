@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background1"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:orientation='vertical'
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/AddNewItemHeading"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Add a new item"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="23dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/NewItemNameField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/AddNewItemHeading"
+        android:layout_margin="20dp"
+        android:background="#15ffffff"
+        android:hint="Item name"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+
+    <EditText
+        android:id="@+id/NewItemDescrField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/NewItemNameField"
+        android:layout_margin="20dp"
+        android:background="#15ffffff"
+        android:hint="Item description"
+        android:padding="60dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+
+    <TextView
+        android:id="@+id/AddNewImageText"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/NewItemDescrField"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Item image"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="23dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/ChooseNewImageBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/AddNewImageText"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/black"
+        android:text="Choose file" />
+
+    <EditText
+        android:id="@+id/EditTextNewFileName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/AddNewImageText"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@id/ChooseNewImageBtn"
+        android:gravity="center"
+        android:hint="Enter file name" />
+
+    <ProgressBar
+        android:id="@+id/NewFileProgressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ChooseNewImageBtn"
+        android:layout_marginTop="16dp" />
+
+    <ImageView
+        android:id="@+id/NewImagePreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/NewFileProgressBar"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/NewItemUploadBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/NewImagePreview"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/black"
+        android:text="Upload" />
+
+    </RelativeLayout>
+
+</ScrollView>
+
+

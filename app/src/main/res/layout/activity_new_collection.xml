@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background1"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:orientation='vertical'
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/NewCollectionHeading"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="New collection"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="23dp"
+        android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/CollectionNameField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/NewCollectionHeading"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="#15ffffff"
+            android:hint="Collection name"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <EditText
+            android:id="@+id/CollectionDescrField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/CollectionNameField"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="#15ffffff"
+            android:hint="Collection description"
+            android:padding="60dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+    <TextView
+        android:id="@+id/AddImageText"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/DateOfAcq"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="collection image"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="21dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/ChooseFileBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/AddImageText"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/black"
+        android:text="Choose file" />
+
+    <EditText
+        android:id="@+id/EditTextFileName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/AddImageText"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@id/ChooseFileBtn"
+        android:gravity="center"
+        android:hint="Enter file name" />
+
+        <Button
+            android:id="@+id/UploadBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ImagePreview"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/black"
+            android:gravity="center"
+            android:text="Done" />
+
+        <ProgressBar
+            android:id="@+id/ProgressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ChooseFileBtn"
+            android:layout_marginTop="16dp" />
+
+    <ImageView
+        android:id="@+id/ImagePreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ProgressBar"
+        android:layout_marginTop="20dp" />
+
+        <EditText
+            android:id="@+id/CollectionCatField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/CollectionDescrField"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="#15ffffff"
+            android:hint="Collection category"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <EditText
+            android:id="@+id/CollectionGoal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/CollectionCatField"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="#15ffffff"
+            android:hint="Collection goal (in number of items)"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <EditText
+            android:id="@+id/DateOfAcq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/CollectionGoal"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="#15ffffff"
+            android:hint="Date of acquisition"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:layout_width="1000px"
+                android:layout_height="500px"
+                android:id="@+id/barchart"
+                android:layout_below="@+id/UploadBtn"
+                />
+
+
+    </RelativeLayout>
+</ScrollView>
